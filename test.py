@@ -7,7 +7,8 @@ tokenizer = QWenTokenizer('cl100k_base.tiktoken')
 
 def tokenize_test(text):
     print('input text:', text)
-    print('tokens:', get_decoded_tokens(text))
+    print('tokens:', tokenizer.tokenize(text))
+    print('decoded tokens:', get_decoded_tokens(text))
     print('token length:', len(get_decoded_tokens(text)))
     # print('token length:', len(enc.encode(text)))
 
